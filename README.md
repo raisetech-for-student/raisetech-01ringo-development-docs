@@ -11,7 +11,7 @@
 
 API Blueprintの実行環境を含むDockerコンテナです
 
-- aglioを用いたドキュメントの表示環境
+- aglioを用いたapi-bluprintの表示環境
 - drakovを用いたモックサーバー
 
 上記２つの機能を内包しています。
@@ -38,8 +38,11 @@ API Blueprintの実行環境を含むDockerコンテナです
 2. docker-compose.ymlファイルのファイル指定を変更する
   例）表示させたいファイルがsample.apibの場合、commandを下記で指定する
   ```command: aglio -i sample.apib -s -h 0.0.0.0 -p 8000```
+  ![image](https://user-images.githubusercontent.com/83934720/163670026-5463f600-ceef-4e56-ae02-2da3a09ba0e5.png)
   
 3. ```$ open http://localhost:8000/```を実行し、表示を確認
+  ![image](https://user-images.githubusercontent.com/83934720/163670260-f7ea1eb5-8720-44fd-ba4e-ce048f8659fa.png)
+
 
 ## 使用例(drakov)
 
@@ -47,4 +50,7 @@ API Blueprintの実行環境を含むDockerコンテナです
   ※（2022/04/16現在）Dockerコンテナ外からdrakovが実行できない。原因は調査中
 
 2. コンテナ内でapi-blueprintで定義ずみのURIの動作を確認
-  ```# curl http://localhost:8001/greeting```(sample.apibの場合)
+  ```# curl -v http://localhost:8001/greeting```(sample.apibの場合)
+  ![image](https://user-images.githubusercontent.com/83934720/163670212-11bc1b7c-9f1e-4a4d-aacc-562a8b354ee4.png)
+
+  
