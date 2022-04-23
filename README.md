@@ -34,16 +34,16 @@ API Blueprintの実行環境を含むDockerコンテナです
 
 1. docsディレクトリ配下に表示させたい.apibファイルを配置
 
-2. docker-compose.ymlファイルのファイル指定を変更する
-  例）表示させたいファイルがsample.apibの場合、commandを下記で指定する
-  ```command: aglio -i sample.apib -s -h 0.0.0.0 -p 8000```
+2. docker-compose.ymlファイルのファイル指定を変更する  
+例）表示させたいファイルがsample.apibの場合、commandを下記で指定する   
+```command: aglio -i sample.apib -s -h 0.0.0.0 -p 8000```
   
 3. ```$ open http://localhost:8000/```を実行し、表示を確認
 
 ## 使用例(drakov)
 
-1. ```$ docker-compose exec drakov bash```
-  ※（2022/04/16現在）Dockerコンテナ外からdrakovが実行できない。原因は調査中
+1. ```$ docker-compose exec drakov bash```   
+※（2022/04/16現在）Dockerコンテナ外からdrakovが実行できない。原因は調査中
 
 2. コンテナ内でapi-blueprintで定義ずみのURIの動作を確認
   ```# curl http://localhost:8001/greeting```(sample.apibの場合)
