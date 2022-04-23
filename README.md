@@ -5,7 +5,7 @@
 リンゴチームの開発用ドキュメントの保管場所です。
 リンゴの個別issueもこちらで管理。
 
-~~今後、アプリ開発に入った場合は、削除するかも（応相談）。~~（4/16山口削除）
+4/16 API Blueprint 環境コンテナの作成
 
 ## API Blueprint　Dockerコンテナ 概略
 
@@ -23,7 +23,6 @@ API Blueprintの実行環境を含むDockerコンテナです
 2. cd '任意のディレクトリ'
 
 3. ```$ git clone https://github.com/raisetech-for-student/raisetech-01ringo-development-docs.git```
-  又は```$ git clone git@github.com:raisetech-for-student/raisetech-01ringo-development-docs.git```
 
 4. ```$ docker-compose up -d```
   コンテナ構築時
