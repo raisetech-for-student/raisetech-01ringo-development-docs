@@ -7,7 +7,7 @@ services:
     volumes:
       - "./docs:/projects"
     tty: true
-    command: aglio -i sample.apib -s -h 0.0.0.0 -p 8000
+    command: aglio -i restfulapi.apib -s -h 0.0.0.0 -p 8000
   drakov:
     build: .
     ports:
@@ -15,4 +15,4 @@ services:
     volumes:
       - "./docs:/projects"
     tty: true
-    command: drakov -f "**/*.apib" --public --watch --p 8001
+    command: drakov -f "**/restful.apib" --public --watch --p 8001

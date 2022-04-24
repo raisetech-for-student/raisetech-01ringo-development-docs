@@ -1,0 +1,31 @@
+FORMAT: 1A
+
+# ringo-development 仕様書
+
+## User CRUD RESTfulAPI
+これはサンプルのドキュメントです。
+
+# Group ユーザー管理API
+
+# ユーザー登録処理 [/user] 
+
+## ユーザー登録処理 [POST] 
+
++ Request  (application/json)
+    + Body
+        {
+            "name": "API 太郎",
+            "birthdate":"2022-01-01"
+        }
+
++ Response 201 (application/json)
+    + Body
+        {
+            message: "Register Succeed!!"
+        }
+
+# ユーザー検索処理 [/user] 
+
+## ユーザー検索処理 [GET]
+
+
