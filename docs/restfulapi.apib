@@ -12,6 +12,10 @@ FORMAT: 1A
 ## ユーザー登録処理 [POST] 
 
 + Request  (application/json)
+    + Attribute
+        + name: API 太郎 (string,required) - ユーザー名
+        + birthdate: `2022-01-01`(string,required) - ユーザーの誕生日
+
     + Body
         {
             "name": "API 太郎",
@@ -22,6 +26,29 @@ FORMAT: 1A
     + Body
         {
             message: "Register Succeed!!"
+        }
+
++ Response 400 (application/json)
+    + Body
+        {
+            "message":"validation error",
+            "errors":[
+                {
+                    "field":"name",
+                    "messages":[
+                        "cannot be empty",
+                        "maximum length is 255"
+                    ]
+                },
+                {
+                    "field":"birthdate",
+                    "messages":[
+                        "cannot be null",
+                        "format should be yyyy-MM-dd",
+                        "cannot set futre date"
+                    ]
+                }
+            ]
         }
 
 # ユーザー検索処理 [/user] 

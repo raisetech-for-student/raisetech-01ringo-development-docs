@@ -15,4 +15,4 @@ services:
     volumes:
       - "./docs:/projects"
     tty: true
-    command: drakov -f "**/restful.apib" --public --watch --p 8001
+    command: drakov -f "**/*.apib" --public true --p 8001
