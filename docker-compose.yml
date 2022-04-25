@@ -15,4 +15,4 @@ services:
     volumes:
       - "./docs:/projects"
     tty: true
-    command: drakov -f "**/*.apib" --public --watch --p 8001
+    command: drakov -f "**/*.apib" --public true --watch --p 8001
