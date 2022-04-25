@@ -47,10 +47,9 @@ API Blueprintの実行環境を含むDockerコンテナです
 ## 使用例(drakov)
 
 ~~※（2022/04/16現在）Dockerコンテナ外からdrakovが実行できない。原因は調査中~~   
-  ※（2022/04/26現在）不具合解消につきコンテナ外から実行可能な状態となった
+  ※（2022/04/26現在）不具合解消につきコンテナ外から実行可能な状態に修正済み
 
 1. api-blueprintで定義ずみのURIの動作を確認
   ```# curl -v http://localhost:8001/greeting```(sample.apibの場合)
- ![image](https://user-images.githubusercontent.com/83934720/163670212-11bc1b7c-9f1e-4a4d-aacc-562a8b354ee4.png)
- 
+ ![image](https://user-images.githubusercontent.com/83934720/165123241-5d1094ad-880c-428a-9e2b-24e8f533c20e.png)
  
