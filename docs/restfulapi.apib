@@ -1,6 +1,6 @@
 FORMAT: 1A
 
-# ringo-development 仕様書
+# ringo-team-development API仕様書
 
 ## User CRUD RESTfulAPI
 これはサンプルのドキュメントです。
@@ -11,10 +11,15 @@ FORMAT: 1A
 
 ## ユーザー登録処理 [POST] 
 
+ユーザー登録を行う。 以下のパラメータをJSON形式で送信する。
+
+- name (string, required) - ユーザー名。255文字以内。
+- birthdate (string, required) - 生年月日。yyyy-MM-dd形式。未来日付は不可。
+
 + Request  (application/json)
-    + Attribute
-        + name: API 太郎 (string,required) - ユーザー名
-        + birthdate: `2022-01-01`(string,required) - ユーザーの誕生日
+    + Parameters
+        + name: API 太郎 (string)
+        + birthdate: `2022-01-01`(string)
 
     + Body
         {
@@ -25,7 +30,7 @@ FORMAT: 1A
 + Response 201 (application/json)
     + Body
         {
-            message: "Register Succeed!!"
+            "message": "Register Succeed!!"
         }
 
 + Response 400 (application/json)
